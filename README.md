@@ -114,7 +114,7 @@ Returns stream where original items are transformed using given function.
 const mappedStream = stream.map(val => Object.assign({}, val, { foo: 'bar' }));
 ```
 
-### omit `stream.omit('field1', 'field2', ...)`
+### omit `stream.omit(field1, field2, ...)`
 
 Returns stream where given fields where omitted.
 
@@ -123,7 +123,7 @@ Returns stream where given fields where omitted.
 const resultingStream = stream.omit('field1', 'field2');
 ```
 
-### pick `stream.pick('field1', 'field2', ...)`
+### pick `stream.pick(field1, field2, ...)`
 
 Returns stream where each item contains only the given fields.
 
@@ -132,7 +132,7 @@ Returns stream where each item contains only the given fields.
 const resultingStream = stream.pick('field1', 'field2');
 ```
 
-### pluck `stream.pluck('field');`
+### pluck `stream.pluck(field);`
 
 Returns stream with given field picked from each item.
 
