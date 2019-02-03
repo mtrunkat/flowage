@@ -1,6 +1,6 @@
 {
   "name": "flowage",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Easy filtering and transformations for NodeJS streams.",
   "engines": {
     "node": ">=8.0.0"
