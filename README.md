@@ -16,7 +16,7 @@
   * [map `stream.map(function)`](#map-streammapfunction)
   * [omit `stream.omit('field1', 'field2', ...)`](#omit-streamomitfield1-field2-)
   * [pick `stream.pick('field1', 'field2', ...)`](#pick-streampickfield1-field2-)
-  * [pluck `stream.pluck('field');``](#pluck-streampluckfield)
+  * [pluck `stream.pluck('field');`](#pluck-streampluckfield)
   * [uniq `stream.uniq(field)`](#uniq-streamuniqfield)
   * [weakSort `stream.weakSort(sortFunction, bufferMinSize, bufferMaxSize)`](#weaksort-streamweaksortsortfunction-bufferminsize-buffermaxsize)
   * [onSeries `stream.onSeries(async function, concurrency)`](#onseries-streamonseriesasync-function-concurrency)
@@ -132,7 +132,7 @@ Returns stream where each item contains only the given fields.
 const resultingStream = stream.pick('field1', 'field2');
 ```
 
-### pluck `stream.pluck('field');``
+### pluck `stream.pluck('field');`
 
 Returns stream with given field picked from each item.
 
