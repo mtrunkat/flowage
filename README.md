@@ -9,21 +9,18 @@
 - [Motivation](#motivation)
 - [Basic usage](#basic-usage)
 - [Reference](#reference)
-  * [merge](#merge)
-  * [collect](#collect)
+  * [merge `stream.merge(stream2)`](#merge-streammergestream2)
+  * [collect `stream.collect()`](#collect-streamcollect)
   * [filter](#filter)
   * [chunk](#chunk)
   * [map](#map)
-  * [merge](#merge-1)
+  * [merge](#merge)
   * [omit](#omit)
   * [pick](#pick)
   * [pluck](#pluck)
   * [uniq](#uniq)
   * [weakSort](#weaksort)
   * [onSeries](#onseries)
-- [Examples](#examples)
-  * [Batched upload to database](#batched-upload-to-database)
-  * [Weak sorting slightly unordered stream](#weak-sorting-slightly-unordered-stream)
 
 <!-- tocstop -->
 
@@ -73,36 +70,81 @@ chunkedStream.onSeries(async (arrayOf100Items) => {
 
 ## Reference
 
-### merge `const mergedStream = stream1.merge(stream2)`
+### merge `stream.merge(stream2)`
 
-Returns stream containing values merged from 2 given streams.
+Returns stream containing values merged from 2 given streams. Merged stream ends when both streams ends.
 
-### collect
+```javascript
+const mergedStream = stream1.merge(stream2);
+```
+
+### collect `stream.collect()`
+
+Returns Promise that gets resolved when stream ends to an array of all the values.
+
+```javascript
+const data = await stream.collect();
+```
 
 ### filter
 
+Returns stream containing
+
+```javascript
+// Filter out even items from stream.
+const filteredStream = stream.filter(val => val.index % 2 === 0);
+```
+
 ### chunk
+
+```javascript
+
+```
 
 ### map
 
+```javascript
+
+```
+
 ### merge
+
+```javascript
+
+```
 
 ### omit
 
+```javascript
+
+```
+
 ### pick
+
+```javascript
+
+```
 
 ### pluck
 
+```javascript
+
+```
+
 ### uniq
+
+```javascript
+
+```
 
 ### weakSort
 
+```javascript
+
+```
+
 ### onSeries
 
-## Examples
+```javascript
 
-### Batched upload to database
-
-
-
-### Weak sorting slightly unordered stream
+```
