@@ -1,0 +1,49 @@
+{
+  "name": "object-stream-utilities",
+  "version": "0.0.1",
+  "description": "@TODO",
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "main": "build/index.js",
+  "keywords": [
+    "@TODO"
+  ],
+  "author": {
+    "name": "Marek Trunkat",
+    "url": "https://trunkat.eu"
+  },
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/@TODO"
+  },
+  "bugs": {
+    "url": "@TODO"
+  },
+  "homepage": "@TODO",
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "test": "nyc --reporter=html --reporter=text mocha --timeout 60000 --recursive",
+    "lint": "npm run build && ./node_modules/.bin/eslint ./src ./test",
+    "lint:fix": "./node_modules/.bin/eslint ./src ./test --ext .js,.jsx --fix"
+  },
+  "dependencies": {
+    "underscore": "^1.9.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "eslint": "^5.5.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-react": "^7.0.1",
+    "mocha": "^3.5.3",
+    "nyc": "^13.0.1"
+  }
+}
