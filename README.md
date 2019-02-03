@@ -70,7 +70,7 @@ chunkedStream.onSeries(async (arrayOf100Items) => {
 
 ## Reference
 
-### merge `stream.merge(stream2)`
+### merge `stream1.merge(stream2)`
 
 Returns stream containing values merged from 2 given streams. Merged stream ends when both streams ends.
 
@@ -86,31 +86,31 @@ Returns Promise that gets resolved when stream ends to an array of all the value
 const data = await stream.collect();
 ```
 
-### filter
+### filter `stream.filter(function)`
 
-Returns stream containing
+Returns stream containing filtered values.
 
 ```javascript
 // Filter out even items from stream.
 const filteredStream = stream.filter(val => val.index % 2 === 0);
 ```
 
-### chunk
+### chunk `stream.chunk(length)`
+
+Returns stream where each item is an array given number of items from original stream.
 
 ```javascript
-
+// Chunk values into arrays of 10 items.
+const chunkedStream = stream.chunk(10);
 ```
 
-### map
+### map `stream.map(function)`
+
+Returns stream where original items are transformed using given function.
 
 ```javascript
-
-```
-
-### merge
-
-```javascript
-
+// Extend each object in the stream with `.foo = 'bar'` field.
+const mappedStream = stream.map(val => Object.assign({}, val, { foo: 'bar' }));
 ```
 
 ### omit
