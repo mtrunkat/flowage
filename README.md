@@ -14,12 +14,12 @@
   * [filter `stream.filter(function)`](#filter-streamfilterfunction)
   * [chunk `stream.chunk(length)`](#chunk-streamchunklength)
   * [map `stream.map(function)`](#map-streammapfunction)
-  * [omit](#omit)
-  * [pick](#pick)
-  * [pluck](#pluck)
-  * [uniq](#uniq)
-  * [weakSort](#weaksort)
-  * [onSeries](#onseries)
+  * [omit `stream.omit('field1', 'field2', ...)`](#omit-streamomitfield1-field2-)
+  * [pick `stream.pick('field1', 'field2', ...)`](#pick-streampickfield1-field2-)
+  * [pluck `stream.pluck('field');``](#pluck-streampluckfield)
+  * [uniq `stream.uniq(field)`](#uniq-streamuniqfield)
+  * [weakSort `stream.weakSort(sortFunction, bufferMinSize, bufferMaxSize)`](#weaksort-streamweaksortsortfunction-bufferminsize-buffermaxsize)
+  * [onSeries `stream.onSeries(async function, concurrency)`](#onseries-streamonseriesasync-function-concurrency)
 
 <!-- tocstop -->
 
