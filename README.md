@@ -15,15 +15,17 @@ const readable = new Readable({ objectMode: true });
 let n = 0;
 setInterval(() => readable.push({ n: n++ }), 1000);
 
-const mapped = readable.pipe(new ObjectStreamUtilities());
+// Pipe it thru ObjectStreamUtilities() that returns stream extended
+// with many methods.
+const objectStream = readable.pipe(new ObjectStreamUtilities());
 
 // Split the stream into a stream of odd objects and even objects
 // and extend them with some field is=odd or is=even
-const oddStream = mapped
+const oddStream = objectStream
     .filter((obj) => obj.x % 2)
     .map((obj) => Object.assign({}, obj, { is: 'odd' }));
 
-const evenStream = mapped
+const evenStream = objectStream
     .filter((obj) => obj.x % 2 === 0)
     .map((obj) => Object.assign({}, obj, { is: 'even' }));
 
