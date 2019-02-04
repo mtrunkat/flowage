@@ -151,7 +151,7 @@ You need enough memory to keep a set of all unique values hashed using sha256.
 const uniquesStream = stream.uniq('id');
 ```
 
-### weakSort `stream.weakSort(sortFunction, bufferMinSize, bufferMaxSize)`
+### weakSort `stream.weakSort(sortFunction, [bufferMinSize=75], [bufferMaxSize=100])`
 
 Returns stream containing values sorted using given function and floating buffer of a given size.
 
@@ -168,7 +168,7 @@ const sortFunction = (a, b) => a.index < b.index ? -1 : 1;
 const sortedStream = stream.sort(sortFunction, 75, 100);
 ```
 
-### onSeries `stream.onSeries(async function, concurrency)`
+### onSeries `stream.onSeries(async function, [concurrency=1])`
 
 Returns a promise that gets resolved when given function gets finished for the last item of the stream.
 
