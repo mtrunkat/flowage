@@ -18,8 +18,8 @@
   * [pick `stream.pick(field1, field2, ...)`](#pick-streampickfield1-field2-)
   * [pluck `stream.pluck(field);`](#pluck-streampluckfield)
   * [uniq `stream.uniq(field)`](#uniq-streamuniqfield)
-  * [weakSort `stream.weakSort(sortFunction, bufferMinSize, bufferMaxSize)`](#weaksort-streamweaksortsortfunction-bufferminsize-buffermaxsize)
-  * [onSeries `stream.onSeries(async function, concurrency)`](#onseries-streamonseriesasync-function-concurrency)
+  * [weakSort `stream.weakSort(sortFunction, [bufferMinSize=75], [bufferMaxSize=100])`](#weaksort-streamweaksortsortfunction-bufferminsize75-buffermaxsize100)
+  * [onSeries `stream.onSeries(async function, [concurrency=1])`](#onseries-streamonseriesasync-function-concurrency1)
 
 <!-- tocstop -->
 
