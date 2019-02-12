@@ -25,7 +25,7 @@
 
 ## Motivation
 
-This package simplifies transformations and filtering of NodeJS streams. Think about it as [Underscore.js](http://underscorejs.org)
+This package simplifies transformations and filtering of NodeJS object streams. Think about it as [Underscore.js](http://underscorejs.org)
 for streams.
 
 The basic use case I faced many times was a transformation of a large number of JSON objects that are finally stored in some database.
